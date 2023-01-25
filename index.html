@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js" defer></script>
+    <title>OpenRove</title>
+</head>
+<body>
+    <div id="box" class="box">
+        <div id="header" class="header wrapper">
+            <div class="nav">
+                <a class="logo" href="#header"> </a>
+                <ul>
+                    <li><a class="text" href="#about">Про нас</a></li>
+                    <li><a class="text" href="#partners">Партнери</a></li>
+                    <li><a class="text" href="#signUp">Реєстрація</a></li>
+                    <li><a onclick="fun()" class="text private" href="#">Особистий кабінет</a></li>
+                </ul>
+            </div>
+            <div class="header__content">
+                <p class="header__headline">OpenRove</p>
+                <p class="text header__text">Профорієнтаційний проєкт для українських підлітків з можливістю стажування в семи найпрестижніших сферах</p>
+                <div class="header__buttons">
+                    <a href="#about" class="header__button">Детальніше</a>
+                    <a href="#" class="header__button">Реєстрація</a>
+                </div>
+            </div>
+            <div class="header__img"> </div>
+        </div>
+        <div class="about wrapper" id="about">
+            <p class="headline">Що ми пропонуємо клієнтам?</p>
+            <p class="text">OpenRove — профорієнтаційний проєкт для підлітків, котрий пропонує відвідати дві лекційні частини:</p>
+            <section data-aos="fade-right" class="about__lections">
+                <p class="headline">Загальні профорієнтаційі лекції</p>
+                <p class="text">На початку вашої участі в проєкті після відбору ви відвідаєте курс загальних лекцій пов'язаних із ключовими моментами вибору майбутньої професії, а також особливстей працевлаштування і захисту своїх прав як працівника.</p>
+            </section>
+            <section data-aos="fade-left" class="about__lections">
+                <p class="headline">Лекції профільного спрямування</p>
+                <p class="text">Після загальних лекцій у вас буде можливість обрати одну з семи сфер, щоб продовжити своє навчання. Саме вам будуть представлені: бізнес та підтриємництво, IT, юриспруденція, банківська справа, менеджмент, дизайн та державна служба.</p>
+            </section>
+            <p class="text textBold">Загальні лекції будуть проведені спеціалістами з профорієнтації, тематичні проведуть спеціалісти у тій чи іншій сфері. До програми також будуть підключені коучі, які будуть супроводжувати учасників та відслідковувати їх прогрес.</p>
+            <div class="about__staging">
+                <div class="about__stagingImg"> </div>
+                <p class="text">Після проходження лекційої частини програми ми запропонуємо вам пройти стажування в одній з наших партнерських компаній, щоб закріпити знання і навички отримані під час навчання, а також отримати робочій досвід, котрий є дуже важлим для реальної роботи.</p>
+            </div>
+        </div>
+        <div id="partners" class="partners">
+            <div class="headline">Наші партнери</div>
+            <div data-aos="fade-up" class="partners__list">
+                <img src="image/logo/Adobe-Logo.png" alt="">
+                <img src="image/logo/ilyashev-and-partners-logo.png" alt="">
+                <img src="image/logo/landor-1-logo-png-transparent.png" alt="">
+                <img src="image/logo/logo_PrivatBank.png" alt="">
+                <img src="image/logo/Oschadbank.png" alt="">
+                <img src="image/logo/Pentagram.svg" alt="">
+                <img src="image/logo/R.png" alt="">
+                <img src="image/logo/UKRSIBBANK.png" alt="">
+            </div>
+        </div>
+        <div class="wrapper footer">
+            <div id="signUp" class="footer__info">
+                <div class="headline">Реєструйся вже зараз!</div>
+                <p class="text">Кількість місць обмежена, тому використайте круту можливість вже зараз.</p>
+                <p class="text">Залишилися питання? Телефонуйте за номером: <a href="tel:+380999999999">+38(099) 999 99 99</a></p>
+                <a href="#" class="footer__button">Реєструйся!</a>
+            </div>
+            <div class="footer__img"> </div>
+        </div>
+        <div class="copyright text">© OpenRove, 2023</div>
+    </div>
+    <div id="overlay" class="overlay"></div>
+    <div class="signForm" id="signForm">
+        <a class="cross" onclick="fun2()">&#10006;</a>
+        <p class="headline">Вхід в акаунт</p>
+        <p class="text">Дані для входу в особистий кабінет вам надали координатори проєкту</p>
+        <input class="text" placeholder="Ваш логін" type="text">
+        <input class="text" placeholder="Пароль" type="password">
+        <button onclick="fun2()" class="text">Увійти</button>
+    </div>
+</body>
+</html>

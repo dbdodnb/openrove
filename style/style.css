@@ -1,0 +1,421 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 50px;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: text;
+  src: url(../fonts/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: header;
+  src: url(../fonts/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: bold;
+  src: url(../fonts/Rubik-SemiBold.ttf);
+}
+.text {
+  font-size: 22px;
+  line-height: 32px;
+  color: #100102;
+  font-family: text;
+}
+.textBold {
+  font-family: bold;
+}
+
+.headline {
+  font-family: header;
+  font-size: 32px;
+  color: #9e4433;
+}
+
+.wrapper {
+  padding: 0 100px;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header .header__content {
+  width: 55%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header .header__content .text {
+  font-size: 28px;
+}
+.header .header__content .header__headline {
+  font-size: 56px;
+  font-family: header;
+  color: #9e4433;
+}
+.header .header__content .header__buttons {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__content .header__buttons a {
+  display: block;
+  width: 45%;
+  height: 65px;
+  background-color: #9e4433;
+  opacity: 0.7;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: text;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.header .header__content .header__buttons a:hover {
+  opacity: 1;
+}
+.header .header__img {
+  width: 45%;
+  height: 60%;
+  background-image: url(../image/header.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.header .nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.header .nav .logo {
+  display: block;
+  content: " ";
+  width: 100px;
+  height: 100px;
+  background-image: url(../image/logo_transparent.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header .nav ul {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header .nav ul li {
+  margin-right: 60px;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav ul li:last-child {
+  height: 70px;
+  margin-right: 0;
+  background-color: #9e4433;
+  opacity: 0.7;
+  text-decoration: none;
+  font-family: text;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.header .nav ul li:last-child:hover {
+  opacity: 1;
+}
+.header .nav ul li a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+.header .nav ul li a:hover {
+  transform: scale(1.05);
+}
+
+.private {
+  color: #ffffff;
+  padding: 0 15px;
+}
+.private:hover {
+  transform: scale(1);
+}
+
+.about {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about .headline {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .text {
+  margin-top: 50px;
+}
+.about__lections {
+  width: 47%;
+  min-height: 100px;
+  margin-top: 50px;
+  background-color: #f2e6e3;
+  border-radius: 15px;
+  padding: 25px 15px;
+  box-sizing: border-box;
+}
+.about__lections .headline {
+  font-size: 24px;
+  text-align: center;
+}
+.about__lections .text {
+  margin-top: 25px;
+}
+.about__staging {
+  margin-top: 50px;
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.about__stagingImg {
+  width: 35%;
+  height: 100%;
+  background-image: url(../image/staging.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.about__staging .text {
+  width: 60%;
+}
+
+.partners {
+  margin-top: 50px;
+  width: 100%;
+  min-height: 300px;
+}
+.partners .headline {
+  text-align: center;
+  color: #ffffff;
+  background-color: #9e4433;
+  padding: 25px 0;
+}
+.partners__list {
+  width: 100%;
+  min-height: 200px;
+  padding: 0 100px;
+  margin-top: 50px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1%;
+}
+.partners__list img {
+  width: 80%;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  filter: saturate(0);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.partners__list img:hover {
+  filter: saturate(1);
+  opacity: 1;
+}
+
+.footer {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer__info {
+  width: 60%;
+  min-height: 300px;
+}
+.footer__info .headline {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.footer__info .text {
+  margin-top: 25px;
+}
+.footer__info .text:first-child {
+  margin-top: 0px;
+}
+.footer__info .text a {
+  color: #9e4433;
+}
+.footer__info .footer__button {
+  margin-top: 50px;
+  display: block;
+  width: 45%;
+  height: 65px;
+  background-color: #9e4433;
+  opacity: 0.7;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: text;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.footer__info .footer__button:hover {
+  opacity: 1;
+}
+.footer__img {
+  width: 35%;
+  height: 100%;
+  background-image: url(../image/footer.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.copyright {
+  margin-top: 50px;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #9e4433;
+  opacity: 0.9;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 111;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+  transition: 0.3s;
+}
+
+.signForm {
+  width: 50%;
+  height: 500px;
+  background-color: #f2e6e3;
+  position: absolute;
+  top: 50vh;
+  left: 25vw;
+  transform: translateY(-50%);
+  border-radius: 15px;
+  padding: 25px 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.3s;
+  display: none;
+  z-index: 222;
+}
+.signForm .cross {
+  cursor: pointer;
+  font-size: 22px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+.signForm input, .signForm button {
+  width: 90%;
+  height: 60px;
+  border-radius: 7.5px;
+  outline: none;
+  border: none;
+  padding: 0 25px;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+.signForm input:active, .signForm button:active {
+  outline: 2px solid #9e4433;
+}
+.signForm input:focus, .signForm button:focus {
+  outline: 2px solid #9e4433;
+}
+.signForm button:hover {
+  background-color: #9e4433;
+  color: #ffffff;
+}
+.signForm .text {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

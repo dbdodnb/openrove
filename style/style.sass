@@ -1,0 +1,365 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+    
+html
+    scroll-behavior: smooth
+    scroll-padding: 50px
+    overflow-x: hidden
+
+$black: #100102
+$red: #9e4433
+$white: #ffffff
+$redBg: #f2e6e3
+
+@font-face 
+    font-family: text
+    src: url(../fonts/Rubik-Regular.ttf)
+
+@font-face 
+    font-family: header
+    src: url(../fonts/Rubik-Bold.ttf)
+
+@font-face
+    font-family: bold
+    src: url(../fonts/Rubik-SemiBold.ttf)
+
+.text
+    font-size: 22px
+    line-height: 32px
+    color: $black
+    font-family: text
+    &Bold
+        font-family: bold
+
+.headline
+    font-family: header
+    font-size: 32px
+    color: $red
+
+.wrapper
+    padding: 0 100px
+
+.box
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+
+.header
+    width: 100%
+    height: 100vh
+    display: flex
+    flex-wrap: wrap
+    .header__content
+        width: 55%
+        height: 60%
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        justify-content: space-around
+        .text
+            font-size: 28px
+        .header__headline
+            font-size: 56px
+            font-family: header
+            color: $red
+        .header__buttons
+            width: 60%
+            display: flex
+            justify-content: space-between
+            a
+                display: block
+                width: 45%
+                height: 65px
+                background-color: $red
+                opacity: 0.7
+                color: $white
+                text-decoration: none
+                font-family: text
+                font-size: 22px
+                display: flex
+                justify-content: center
+                align-items: center
+                border-radius: 15px
+                transition: .3s
+                &:hover
+                    opacity: 1
+    .header__img
+        width: 45%
+        height: 60%
+        background-image: url(../image/header.png)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: contain
+    .nav 
+        display: flex
+        justify-content: space-between
+        width: 100%
+        .logo
+            display: block
+            content: ' '
+            width: 100px
+            height: 100px
+            background-image: url(../image/logo_transparent.png)
+            background-size: contain
+            background-position: center
+            background-repeat: no-repeat
+        ul
+            width: 100%
+            height: 100px
+            position: relative
+            top: 0
+            display: flex
+            flex-wrap: wrap
+            flex-direction: row
+            justify-content: flex-end
+            align-items: center
+            li
+                margin-right: 60px
+                display: flex
+                height: 100%
+                justify-content: center
+                align-items: center
+                &:last-child
+                    height: 70px
+                    margin-right: 0
+                    background-color: $red
+                    opacity: 0.7
+                    text-decoration: none
+                    font-family: text
+                    font-size: 22px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 15px
+                    transition: .3s
+                    &:hover
+                        opacity: 1
+                a
+                    text-decoration: none
+                    transition: .3s
+                    &:hover
+                        transform: scale(1.05)
+                        
+.private
+    color: $white
+    padding: 0 15px
+    &:hover
+        transform: scale(1)
+
+.about
+    width: 100%
+    min-height: 400px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .headline
+        position: relative
+        left: 50%
+        transform: translateX(-50%)
+    .text
+        margin-top: 50px
+    &__lections
+        width: 47%
+        min-height: 100px
+        margin-top: 50px
+        background-color: $redBg
+        border-radius: 15px
+        padding: 25px 15px
+        box-sizing: border-box
+        .headline
+            font-size: 24px
+            text-align: center      
+        .text
+            margin-top: 25px
+    &__staging
+        margin-top: 50px
+        width: 100%
+        min-height: 250px
+        display: flex
+        justify-content: space-between
+        &Img
+            width: 35%
+            height: 100%
+            background-image: url(../image/staging.png)
+            background-repeat: no-repeat
+            background-size: contain
+            background-position: center
+        .text
+            width: 60%
+        
+.partners
+    margin-top: 50px
+    width: 100%
+    min-height: 300px
+    .headline
+        text-align: center
+        color: $white
+        background-color: $red
+        padding: 25px 0
+    &__list
+        width: 100%
+        min-height: 200px
+        padding: 0 100px
+        margin-top: 50px
+        box-sizing: border-box
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        grid-gap: 1%
+        img
+            width: 80%
+            display: flex
+            align-self: center
+            justify-self: center
+            filter: saturate(0)
+            opacity: 0.7
+            transition: .3s
+            &:hover
+                filter: saturate(1)
+                opacity: 1
+
+.footer
+    width: 100%
+    min-height: 200px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__info
+        width: 60%
+        min-height: 300px
+        .headline
+            margin-bottom: 50px
+            margin-top: 50px
+        .text
+            margin-top: 25px
+            &:first-child
+                margin-top: 0px
+            a
+                color: $red
+        .footer__button
+            margin-top: 50px
+            display: block
+            width: 45%
+            height: 65px
+            background-color: $red
+            opacity: 0.7
+            color: $white
+            text-decoration: none
+            font-family: text
+            font-size: 22px
+            display: flex
+            justify-content: center
+            align-items: center
+            border-radius: 15px
+            transition: .3s
+            &:hover
+                opacity: 1
+    &__img
+        width: 35%
+        height: 100%
+        background-image: url(../image/footer.png)
+        background-repeat: no-repeat
+        background-size: contain
+        background-position: center
+
+.copyright
+    margin-top: 50px
+    width: 100%
+    height: 70px
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $white
+    background-color: $red
+    opacity: 0.9
+
+.overlay
+    width: 100vw
+    height: 100vh
+    position: absolute
+    z-index: 111
+    top: 0
+    left: 0
+    background-color: rgba(0,0, 0, 0.3)
+    display: none
+    transition: .3s
+
+.signForm
+    width: 50%
+    height: 500px
+    background-color: $redBg
+    position: absolute
+    top: 50vh
+    left: 25vw
+    transform: translateY(-50%)
+    border-radius: 15px
+    padding: 25px 15px
+    box-sizing: border-box
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    transition: .3s
+    display: none
+    z-index: 222
+    .cross
+        cursor: pointer
+        font-size: 22px
+        display: block
+        width: 22px
+        height: 22px
+        position: absolute
+        top: 25px
+        right: 25px
+    input, button
+        width: 90%
+        height: 60px
+        border-radius: 7.5px
+        outline: none
+        border: none
+        padding: 0 25px  
+        transition: .3s
+        box-sizing: border-box
+        &:active
+            outline: 2px solid $red
+        &:focus
+            outline: 2px solid $red
+    button:hover
+        background-color: $red
+        color: $white
+    .text
+        text-align: center
+    
